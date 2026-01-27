@@ -117,3 +117,11 @@ const VAR4 = 1000
 // 1. Scope - Block {...} level scope
 // 2. Whenever you declare a variable using a const keyword it cannot be redeclared and  cannot be reinitialised
 // 3. It is mandatory to assign the value of the variable at the time of declaration
+
+
+let lang = "ts"
+
+{
+    console.log((window).lang);
+    let lang = "TS"
+}

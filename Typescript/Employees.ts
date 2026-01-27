@@ -38,7 +38,9 @@ class ClassName{
 
 */
 
-class Employees{
+//export - import
+
+export class Employees{
     // properties
 
     empId : number 
@@ -74,9 +76,14 @@ class Employees{
 const emp1 = new Employees(1,"Rahul", 500000, 10000)
 console.log(emp1.empId);
 emp1.employeeInformation()
+Employees.displayCompanyName()
 
 const emp = new Employees(2,"Raj", 300000, 20000)
 console.log(emp.empId);
 emp.employeeInformation()
+Employees.displayCompanyName()
+
+
+
 
 
