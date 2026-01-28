@@ -31,8 +31,7 @@ let k1 = 30
     console.log(k1); // window
 }
 
-console.log(k1);
-
+console.log(k1); 
 
 // var
 // 1. Scope - Global or functional scope
