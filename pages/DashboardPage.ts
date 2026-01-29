@@ -28,9 +28,22 @@ export class DashboardPage{
             // Get the text value of all the producr one by one and compare if it is matching with IPhone 13 pro or not. If it is matching click on add to cart
 
             const productText = await this.products.nth(i).locator("h5").textContent() // 
-            console.log(productText);
             if(productText === productName){
                 await this.products.nth(i).locator("button").last().click()
+                break
+            }
+        }
+    }
+
+
+    async searchAndViewProductDetails(productName:string){
+        await this.products.first().waitFor()
+        const countOfProduct = await this.products.count() // 5 [0,1,2,3,4]
+
+        for(let i=0; i<countOfProduct; i++){
+            const productText = await this.products.nth(i).locator("h5").textContent() // 
+            if(productText === productName){
+                await this.products.nth(i).locator("button").first().click()
                 break
             }
         }

@@ -40,6 +40,18 @@ class ClassName{
 
 //export - import
 
+import data from '../TestData/logindata.json'
+console.log(data);
+
+const data1 = {
+  url: 'https://rahulshettyacademy.com/client',
+  email: 'testnHNk@gmail.com',
+  password: 'Testing@1234',
+  incorrectPassword: 'Test'
+}
+
+console.log(data1.url);
+
 export class Employees{
     // properties
 
@@ -78,10 +90,16 @@ console.log(emp1.empId);
 emp1.employeeInformation()
 Employees.displayCompanyName()
 
+console.log(emp1);
+
 const emp = new Employees(2,"Raj", 300000, 20000)
 console.log(emp.empId);
 emp.employeeInformation()
 Employees.displayCompanyName()
+console.log(emp);
+
+
+
 
 
 
