@@ -56,15 +56,10 @@ for(let product of data){
 */
 
 
-// excel
-// allure report
-// jenkins
+
+// Jenkins - CI/CD
 // Playwright MCP
 // Playwright AI
-// Annotations
 // API Testing
-
-
-// 
 
 

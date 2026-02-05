@@ -13,14 +13,23 @@ test.beforeEach("Pre-condition for the test cases", async ({page})=>{
     await loginPage.launchURL(url)
 })
 
-test("Valid Login test", async ()=>{
-    await loginPage.loginIntoApplication(email, password)
-    await expect(loginPage.homePageIdentifier).toBeVisible()
-})
+test.describe("Login Page Test case", async ()=>{
 
-test("invalid Login test", async ()=>{
-    await loginPage.invalidLogin(email, incorrectPassword)
-    await expect(loginPage.errorMsg).toHaveText("Incorrect email or password.")
+    test("@smoke @regression Valid Login test", async ()=>{
+        test.step(" Login into application", async()=>{
+            await loginPage.loginIntoApplication(email, password)
+        })
+        test.step("Validate if the login is successful", async()=>{
+            await expect(loginPage.homePageIdentifier).toBeVisible()
+
+        })
+    })
+
+    test("invalid Login test", {tag : '@regression'}, async ()=>{
+        await loginPage.invalidLogin(email, incorrectPassword)
+        await expect(loginPage.errorMsg).toHaveText("Incorrect email or password.")
+    })
+
 })
 
 
