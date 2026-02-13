@@ -56,10 +56,7 @@ for(let product of data){
 */
 
 
-
-// Jenkins - CI/CD
-// Playwright MCP
-// Playwright AI
+// Playwright Agent - 
 // API Testing
 
 
